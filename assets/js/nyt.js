@@ -29,8 +29,6 @@ function nytOnLoad() {
 
 nytOnLoad();
 
-$(function() { $('#search-query').focus(); });
-
 function nytSearch(searchTerm) {
     queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=548cf1cc9a384242a531beac63abd9f4&sort=newest&q=" + searchTerm;
     $.ajax({
