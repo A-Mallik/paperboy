@@ -63,26 +63,82 @@ img {
 }
 
 .wrapper:hover > div > div {
-    position: relative;
     opacity:0.6;
-    bottom: 0;
-    height: inherit;
-    z-index: 1;
   }
   
-  /* fade ONE in on hover */
   .wrapper > div > div:hover{
-     position: relative;
      opacity:1;
-     bottom: 2vh;
-     z-index: 9999;
   }
+
 
 .placeholder {
     height: 80px;
     width: 80px;
     border-radius: 0.5em;
 }
+
+
+
+
+.upper-deck > div {
+    -webkit-transition:0.5s;
+    transition:0.5s;
+}
+
+.upper-deck:hover > div {
+    bottom: 0vh;
+    height: auto;
+    position: relative;
+    z-index: 1999;
+}
+
+.upper-deck > div:hover {
+    bottom: 2vh;
+    position: relative;
+    z-index: 1999;
+}
+
+.upper-deck {
+    max-height: 95vh;
+    padding-top: 50px;
+}
+
+.lower-deck {
+    position: absolute;
+    bottom: 0;
+    max-height: 45vh;
+    z-index: 9999;
+    background: #fff;
+}
+
+
+.lower-deck > div {
+    -webkit-transition:0.5s;
+    transition:0.5s;
+    z-index: 9999;
+
+}
+
+.lower-deck:hover > div {
+    position: relative;
+    height: 45vh;
+    bottom: 0vh;
+    z-index: 9999;
+
+}
+
+.lower-deck > div:hover {
+    position: relative;
+    height: 55vh;
+    bottom: 10vh;
+    z-index: 9999;
+
+}
+
+.upper-table {
+    margin-bottom: 40vh;
+}
+
 
 
 .text-logo {
@@ -106,14 +162,6 @@ img {
     margin: 0 !important;
 }
 
-.upper-deck {
-    max-height: 55vh;
-    padding-top: 50px;
-}
-
-.lower-deck {
-    max-height: 45vh;
-}
 
 .card-title {
     margin-bottom: 0;
