@@ -5,13 +5,19 @@ body {
 
 }
 
+a {
+    color: #0B032D;
+}
+
+a:hover {
+    color: #0B032D;
+    text-decoration: none;
+}
 
 h5{
     font-family: 'Roboto', sans-serif;
     font-weight: 900 !important;
     font-size: 1em;
-
-
 }
 h6 {
     font-family: 'Roboto',sans-serif;
@@ -153,6 +159,10 @@ img {
 
 .youtube_cards {
     padding-top: 62px !important;
+}
+
+#wikiInfo {
+    margin-top: 62px;
 }
 
 /* ------------------------------- Byron's CSS Start -------------------------------  */
