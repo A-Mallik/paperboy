@@ -170,11 +170,12 @@ img {
     top: 0px;
     background: white;
     width: 100%;
+    text-align: center;
     opacity: 0.8;
     z-index: 9999;
 }
 .top-title {
-    padding: 0 0 0 1em;
+    padding: 0;
     line-height: 3.5;
 }
 
