@@ -263,4 +263,7 @@ tr:hover {
     .card-title {
         z-index: 1;
     }
+    .upper-table {
+        margin-bottom: 0;
+    }
 }
