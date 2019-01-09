@@ -5,6 +5,10 @@ body {
 
 }
 
+.col-12 {
+    padding-left: 0;
+}
+
 a {
     color: #0B032D;
 }
