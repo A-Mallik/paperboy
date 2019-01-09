@@ -1,7 +1,6 @@
 
 body {
     font-family: 'Assistant', sans-serif;
-
     color: #0b032d;  /*// Shohan: for color styling */
 
 }
@@ -9,13 +8,15 @@ body {
 
 h5{
     font-family: 'Roboto', sans-serif;
+    font-weight: 900 !important;
     font-size: 1em;
-
 
 
 }
 h6 {
-    font-weight: 600;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400 !important;
+    font-size: 0.875em;
 }
 
 
@@ -36,7 +37,7 @@ p {
 
 
 .fa-search {
-    color: #fff;
+    color: #ccc;
 }
 
 img {
@@ -44,14 +45,34 @@ img {
 }
 
 .wrapper {
-    margin-top: 0;
-    margin-bottom: 0;
+    background: #eee;
 }
 
+.wrapper > div > div {
+    -webkit-transition:0.5s;
+    transition:0.5s;
+}
+
+.wrapper:hover > div > div {
+    position: relative;
+    opacity:0.6;
+    bottom: 0;
+    height: inherit;
+    z-index: 1;
+  }
+  
+  /* fade ONE in on hover */
+  .wrapper > div > div:hover{
+     position: relative;
+     opacity:1;
+     bottom: 2vh;
+     z-index: 9999;
+  }
+
 .placeholder {
-    height: 100px;
-    width: 100px;
-    background-color: #ccc;
+    height: 80px;
+    width: 80px;
+    border-radius: 0.5em;
 }
 
 
@@ -70,7 +91,7 @@ img {
 }
 
 .card {
-    border: 1px solid #000;
+    border: 1px solid #999;
     border-radius: 0;
       /* box-shadow: 0px 0px 5px 0px #888888; */
     margin: 0 !important;
@@ -86,11 +107,32 @@ img {
 }
 
 .card-title {
-    padding: 0.7em 0;
     margin-bottom: 0;
-    text-align: center;
+    border: 3px solid #fff;
+}
+.top-title {
+    padding: 0 0 0 1em;
+    min-height: 65px;
+    line-height: 3.5;
+}
 
+.bottom-title {
+    padding: 1em;
+}
 
+.fa-reddit-alien {
+    color: #fff;
+    text-shadow: 0px 0px 3px #000, 0px 0px 3px #000; 
+}
+
+.fox-icon {
+    width: auto;
+    height: 50px;
+}
+
+.nyt-icon {
+    width: auto;
+    height: 20px;
 }
 .card-body {
     overflow-y: scroll;
@@ -139,5 +181,8 @@ tr:hover {
     }
     .form-inline {
         padding-bottom: 1em;
+    }
+    .card {
+        min-height: 45vh;
     }
 }

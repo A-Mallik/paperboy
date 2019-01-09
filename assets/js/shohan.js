@@ -15,7 +15,7 @@ window.onload = function() {
     var mm = moment().format("MM")
     var dd = moment().format("DD")
     var queryURL="https://en.wikipedia.org/api/rest_v1/feed/onthisday/all/" + mm + "/" + dd
-    $(".wiki-title").html("Wikipedia (On This Day)")
+    $(".wiki-title").html("<i class='fab fa-wikipedia-w'></i> On This Day...")
     $.getJSON(queryURL, function(data) {       // wikipedia api to get a summary based on button already created or new buttons added
                  info = data.selected;
                  console.log(data)
@@ -46,7 +46,7 @@ wikiOnLoad()
     $( "#search-form" ).submit(function( event ) {
         event.preventDefault();
         console.log("You searched for " + $("#search-query").val().trim())
-        $(".wiki-title").html("Wikipedia")
+        $(".wiki-title").html("<i class='fab fa-wikipedia-w'></i>")
         $.getJSON('https://en.wikipedia.org/api/rest_v1/page/summary/' + $("#search-query").val().trim(), function(data) {       // wikipedia api to get a summary based on button already created or new buttons added
                  info = data.extract;
                  console.log("info: " + info);
@@ -87,7 +87,7 @@ wikiOnLoad()
               image = "assets/images/reddit-logo.svg"
             }
 
-              var redditCard = $('<tr id=' + url + '><td><h6><a href="' + url + '"target="_blank">' + title + '</a></h6><p>' + " " + '</p></td><td class="d-flex justify-content-end"><img src=' + image +' style="height:90px; width:90px;"></td></tr>');
+              var redditCard = $('<tr id=' + url + '><td><h6><a href="' + url + '"target="_blank">' + title + '</a></h6><p>' + " " + '</p></td><td class="d-flex justify-content-end"><img class="placeholder" src=' + image +' ></td></tr>');
               $('.reddit_cards').append(redditCard);
 
 
@@ -127,7 +127,7 @@ wikiOnLoad()
                 image = "assets/images/reddit-logo.svg"
               }
 
-                var redditCard = $('<tr id=' + url + '><td><h6><a href="' + url + '"target="_blank">' + title + '</a></h6><p>' + " " + '</p></td><td class="d-flex justify-content-end"><img src=' + image +' style="height:90px; width:90px;"></td></tr>');
+                var redditCard = $('<tr id=' + url + '><td><h6><a href="' + url + '"target="_blank">' + title + '</a></h6><p>' + " " + '</p></td><td class="d-flex justify-content-end"><img class="placeholder" src=' + image +' ></td></tr>');
                 $('.reddit_cards').append(redditCard);
 
 
