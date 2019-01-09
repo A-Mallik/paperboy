@@ -117,7 +117,7 @@ $(document).ready(function(){
         // var videoLink = 'https://www.youtube.com/watch?v=' + video.id.videoId;
         var videoLink = 'https://www.youtube.com/embed/' + video.id.videoId;
  
-        var youtubeCard = $('<div class="embed-responsive embed-responsive-16by9 mb-4"><iframe class="embed-responsive-item" src="' + videoLink + '"></iframe></div>');      
+        var youtubeCard = $('<div class="embed-responsive embed-responsive-16by9 mb-3"><iframe class="embed-responsive-item" src="' + videoLink + '"></iframe></div>');      
         $('.youtube_cards').append(youtubeCard);
     
     }

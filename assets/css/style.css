@@ -19,6 +19,9 @@ h6 {
     font-size: 0.875em;
 }
 
+table {
+    margin-top: 62px !important;
+}
 
 p {
     font-size: 0.875em;
@@ -109,10 +112,15 @@ img {
 .card-title {
     margin-bottom: 0;
     border: 3px solid #fff;
+    position: absolute;
+    top: 0px;
+    background: white;
+    width: 100%;
+    opacity: 0.8;
+    z-index: 9999;
 }
 .top-title {
     padding: 0 0 0 1em;
-    min-height: 65px;
     line-height: 3.5;
 }
 
@@ -141,6 +149,10 @@ img {
 
 .card-deck {
     margin: 0;
+}
+
+.youtube_cards {
+    padding-top: 62px !important;
 }
 
 /* ------------------------------- Byron's CSS Start -------------------------------  */
@@ -184,5 +196,8 @@ tr:hover {
     }
     .card {
         min-height: 45vh;
+    }
+    .card-title {
+        z-index: 1;
     }
 }
