@@ -30,8 +30,13 @@ h6 {
 }
 
 table {
-    margin-top: 62px !important;
+    margin-top: 70px !important;
 }
+
+.table {
+    margin-bottom: 0 !important;
+}
+
 
 p {
     font-size: 0.875em;
@@ -58,7 +63,7 @@ img {
 }
 
 .wrapper {
-    background: #eee;
+    background: #999;
 }
 
 .wrapper > div > div {
@@ -106,42 +111,36 @@ img {
     max-height: 95vh;
     padding-top: 50px;
 }
-
+/* ===================================== */
 .lower-deck {
     position: absolute;
     bottom: 0;
-    max-height: 45vh;
+    max-height: 70px;
     z-index: 9999;
-    background: #fff;
+    background: #999;
 }
-
 
 .lower-deck > div {
     -webkit-transition:0.5s;
     transition:0.5s;
-    z-index: 9999;
-
 }
 
 .lower-deck:hover > div {
     position: relative;
-    height: 45vh;
-    bottom: 0vh;
+    max-height: inherit;
+    bottom: inherit;
     z-index: 9999;
-
 }
 
 .lower-deck > div:hover {
     position: relative;
-    height: 55vh;
-    bottom: 10vh;
+    min-height: 500px;
+    bottom: 430px;
     z-index: 9999;
-
 }
+/* ===================================== */
 
-.upper-table {
-    margin-bottom: 40vh;
-}
+
 
 
 
@@ -177,6 +176,7 @@ img {
     text-align: center;
     opacity: 0.8;
     z-index: 9999;
+    min-height: 60px;
 }
 .top-title {
     padding: 0;
@@ -210,13 +210,10 @@ img {
     margin: 0;
 }
 
-.youtube_cards {
-    padding-top: 62px !important;
+.youtube_cards > :first-child {
+    margin-top: 70px !important;
 }
 
-#wikiInfo {
-    margin-top: 62px;
-}
 
 /* ------------------------------- Byron's CSS Start -------------------------------  */
 .youtube_img_overlay {
