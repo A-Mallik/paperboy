@@ -4,9 +4,9 @@
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 /* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
     background: #FF0000;
-}
+} */
 
 
 body {
@@ -51,6 +51,13 @@ h6 {
     font-family: 'Roboto',sans-serif;
     font-weight: 400 !important;
     font-size: 0.875em;
+}
+
+h4 {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400 !important;
+    font-size: 1.125em;
+    margin-top: 50px;
 }
 
 table {
@@ -123,6 +130,27 @@ img {
     height: 80px;
     width: 80px;
     border-radius: 0.5em;
+}
+
+.img-lg {
+    margin-bottom: 10px;
+    width: 50%;
+    height: 100%;
+    float: right;
+    margin-left: 35px;
+    margin-top: 30px;
+    background-size: cover;
+    
+}
+
+.headline-text {
+    font-size: 1em !important;
+}
+
+.headline {
+    margin-top: 70px;
+    border-top: 1px solid #dee2e6;
+    height: 30vh
 }
 
 
@@ -311,6 +339,13 @@ tr:hover {
     }
     .upper-table {
         margin-bottom: 0;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    .headline {
+        font-size: 0.875em;
+        height: 50vh;
     }
     
 }

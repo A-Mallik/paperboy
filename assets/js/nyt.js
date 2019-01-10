@@ -6,23 +6,30 @@ function nytOnLoad() {
         url: queryURL,
         method: 'GET'
     }).then(function(response) {
-        // console.log(response);
-        for(let i = 0; i < 10; i++) {
+                    console.log(response.results);
 
+        for(let i = 0; i < 10; i++) {
             var title = response.results[i].title;
             var description = response.results[i].abstract;
             var url = response.results[i].url;
+            var nytCard
             try {
                 var image = response.results[i].multimedia[0].url;
+                var imageLg = response.results[i].multimedia[4].url;
             }
             catch(e) {
                 console.log("hahha no thumbnail")
                 var image = "assets/images/NYT_logo.jpg"
             }
+            if(i > 0) {
+                nytCard = $('<tr id=' + url + '><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src=' + image +' class="placeholder"></td></tr>');
+                $('.nyt-cards').append(nytCard);
 
-
-            var nytCard = $('<tr id=' + url + '><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src=' + image +' class="placeholder"></td></tr>');
-            $('.nyt-cards').append(nytCard);
+            } else {
+                nytCard = $('<div class="headline"><a href="' + url + '" target="_blank"><div id="nyt-headline" class="img-lg"></div><h4>' + title + '</h4></a><p class="headline-text">' + description + '</p></div>');
+                $('.nyt-body').prepend(nytCard);
+                $('#nyt-headline').css("background-image", "url(" + imageLg + ")");  
+            }
         }
     })
 }
@@ -35,13 +42,14 @@ function nytSearch(searchTerm) {
         url: queryURL,
         method: 'GET'
     }).then(function(response){
-        // console.log(response);
+        console.log(response);
         nytSearchHTML(response);
     })
 }
 
 
 function nytSearchHTML(response) {
+    $('.nyt-body').empty();
     $('.nyt-cards').empty();
     if(response.response.docs.length > 0) {
         for(let i = 0; i < response.response.docs.length; i++) {
@@ -91,9 +99,6 @@ $( "#search-form" ).submit(function( event ) {
     event.preventDefault();
     var searchTerm = $('#search-query').val().trim();
     nytSearch(searchTerm)
-    $('html, body').animate({
-        scrollTop: $('.card-body').offset().top - 20 //#DIV_ID is an example. Use the id of your destination on the page
-    }, 'slow');
 });
 
 });
