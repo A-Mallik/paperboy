@@ -163,7 +163,7 @@ img {
     bottom: 430px;
     height: 500px;
 }
-.lower-deck:hover > div {
+/* .lower-deck:hover > div {
     background-color: #eee;
     opacity: 0.5;
 }
@@ -171,7 +171,7 @@ img {
 .lower-deck > div:hover {
     background-color: #fff;
     opacity: 1;
-}
+} */
 /* ===================================== */
 
 
@@ -211,8 +211,13 @@ img {
     text-align: center;
     opacity: 0.8;
     min-height: 70px;
-    z-index: 0;
+    z-index: 100;
 }
+
+.bottom-title:hover {
+    background-color: #ECECEC;
+}
+
 .top-title {
     padding-top: 5px;
     line-height: 3.5;
