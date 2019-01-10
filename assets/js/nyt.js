@@ -91,6 +91,9 @@ $( "#search-form" ).submit(function( event ) {
     event.preventDefault();
     var searchTerm = $('#search-query').val().trim();
     nytSearch(searchTerm)
+    $('html, body').animate({
+        scrollTop: $('.card-body').offset().top - 20 //#DIV_ID is an example. Use the id of your destination on the page
+    }, 'slow');
 });
 
 });

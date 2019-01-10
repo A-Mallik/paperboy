@@ -54,7 +54,7 @@ h6 {
 }
 
 table {
-    margin-top: 70px !important;
+    margin-top: 71px !important;
 }
 
 .table {
@@ -203,24 +203,38 @@ img {
 
 .card-title {
     margin-bottom: 0;
-    border: 3px solid #fff;
     position: absolute;
     top: 0px;
-    background: white;
     width: 100%;
     text-align: center;
-    opacity: 0.8;
     min-height: 70px;
     z-index: 100;
 }
 
 .bottom-title:hover {
     background-color: #ECECEC;
+    opacity: 0.9;
 }
 
 .top-title {
     padding-top: 5px;
     line-height: 3.5;
+}
+
+.text-title {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+2,ffffff+100&0.85+1,0.85+52,0.5+79,0+100 */
+background: -moz-linear-gradient(top, rgba(255,255,255,0.85) 1%, rgba(255,255,255,0.85) 2%, rgba(255,255,255,0.85) 52%, rgba(255,255,255,0.5) 79%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0.85) 1%,rgba(255,255,255,0.85) 2%,rgba(255,255,255,0.85) 52%,rgba(255,255,255,0.5) 79%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,0.85) 1%,rgba(255,255,255,0.85) 2%,rgba(255,255,255,0.85) 52%,rgba(255,255,255,0.5) 79%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.youtube-title {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.91+0,0+100 */
+background: -moz-linear-gradient(top, rgba(255,255,255,0.91) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0.91) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,0.91) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .bottom-title {
