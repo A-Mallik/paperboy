@@ -1,5 +1,53 @@
+
+
 $(".navbar-brand").on("click", function() {
     location.reload()
+})
+
+
+$(".reddit-title").on("click", function() {
+    $(".reddit-minimize-icon").toggleClass("active-card")
+    $(".reddit-card").toggleClass("lower-card-expand")
+    $(".reddit-card").toggleClass("bring-to-front")
+    $(".reddit-minimize-icon").toggleClass("fa-plus")
+    $(".reddit-minimize-icon").toggleClass("fa-chevron-down")
+    $(".wrapper").toggleClass("wrapper-fade")
+    $(".fade-container").toggleClass("fade-cards")
+})
+
+$(".youtube-title").on("click", function() {
+    $(".youtube-minimize-icon").toggleClass("active-card")
+    $(".youtube-card").toggleClass("lower-card-expand")
+    $(".youtube-card").toggleClass("bring-to-front")
+    $(".youtube-minimize-icon").toggleClass("fa-plus")
+    $(".youtube-minimize-icon").toggleClass("fa-chevron-down")
+    $(".wrapper").toggleClass("wrapper-fade")
+    $(".fade-container").toggleClass("fade-cards")
+})
+
+$(".wiki-title").on("click", function() {
+    $(".wiki-minimize-icon").toggleClass("active-card")
+    $(".wiki-card").toggleClass("lower-card-expand")
+    $(".wiki-card").toggleClass("bring-to-front")
+    $(".wiki-minimize-icon").toggleClass("fa-plus")
+    $(".wiki-minimize-icon").toggleClass("fa-chevron-down")
+    $(".wrapper").toggleClass("wrapper-fade")
+    $(".fade-container").toggleClass("fade-cards")
+})
+
+$(".fade-container").on("click", function() {
+    $(".reddit-card").removeClass("lower-card-expand")
+    $(".reddit-card").removeClass("bring-to-front")
+    $(".youtube-card").removeClass("lower-card-expand")
+    $(".youtube-card").removeClass("bring-to-front")
+    $(".wiki-card").removeClass("lower-card-expand")
+    $(".wiki-card").removeClass("bring-to-front")
+    $(".fade-container").toggleClass("fade-cards")
+    $(".active-card").removeClass("fa-chevron-down")
+    $(".active-card").addClass("fa-plus")
+    $(".active-card").removeClass("active-card")
+
+
 })
 
 $("#search-query").on("click", function() {

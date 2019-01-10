@@ -15,13 +15,13 @@ window.onload = function() {
     var mm = moment().format("MM")
     var dd = moment().format("DD")
     var queryURL="https://en.wikipedia.org/api/rest_v1/feed/onthisday/all/" + mm + "/" + dd
-    $(".wiki-title").html("<i class='fab fa-wikipedia-w'></i> On This Day...")
+    $(".wiki-title").html("<i class='fab fa-wikipedia-w'></i> <span class='wiki-day'>On This Day...</span>")
     $.getJSON(queryURL, function(data) {       // wikipedia api to get a summary based on button already created or new buttons added
                  info = data.selected;
                  console.log(data)
                  console.log(info);
                  var numArticles=10
-                 var wikiTable = $("<table>")
+                 var wikiTable = $("<table class='table table-hover'>")
                  var wikiTbody= $("<tbody>")
                  wikiTbody.attr("id", "wiki-cards")
                  $(".wiki-section").empty();

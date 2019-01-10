@@ -1,8 +1,29 @@
 
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
 body {
     font-family: 'Assistant', sans-serif;
     color: #0b032d;  /*// Shohan: for color styling */
+    
 
+}
+.minimize {
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    height: 32px;
+    width: 32px;
+    pointer-events:none;
+    z-index: 1001;
 }
 
 .col-12 {
@@ -17,11 +38,14 @@ a:hover {
     color: #0B032D;
     text-decoration: none;
 }
+#wikiInfo {
+    margin-top: 70px;
+}
 
-h5{
+.wiki-day{
     font-family: 'Roboto', sans-serif;
     font-weight: 900 !important;
-    font-size: 1em;
+    font-size: 0.875em;
 }
 h6 {
     font-family: 'Roboto',sans-serif;
@@ -62,22 +86,37 @@ img {
     object-fit: cover;
 }
 
-.wrapper {
-    background: #999;
+.fade-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: none;
 }
 
-.wrapper > div > div {
+.fade-cards {
+    background: #999;
+    opacity: 0.6;
+    display: block !important;
+}
+
+.bring-to-front {
+    z-index: 9998 !important;
+}
+
+
+/* .wrapper-fade > div > div {
     -webkit-transition:0.5s;
     transition:0.5s;
 }
 
-.wrapper:hover > div > div {
+.wrapper-fade:hover > div > div {
     opacity:0.6;
   }
   
-  .wrapper > div > div:hover{
-     opacity:1;
-  }
+.wrapper-fade > div > div:hover{
+    opacity:1;
+} */
 
 
 .placeholder {
@@ -89,54 +128,49 @@ img {
 
 
 
-.upper-deck > div {
+/* .upper-deck > div {
     -webkit-transition:0.5s;
     transition:0.5s;
 }
 
 .upper-deck:hover > div {
-    bottom: 0vh;
-    height: auto;
-    position: relative;
-    z-index: 1999;
+    z-index: 9999;
 }
 
 .upper-deck > div:hover {
-    bottom: 2vh;
-    position: relative;
-    z-index: 1999;
-}
+    z-index: 9999;
+} */
 
 .upper-deck {
-    max-height: 95vh;
+    height: calc(100vh - 70px);
     padding-top: 50px;
 }
 /* ===================================== */
 .lower-deck {
     position: absolute;
-    bottom: 0;
-    max-height: 70px;
-    z-index: 9999;
-    background: #999;
+    background: #eee;
 }
 
-.lower-deck > div {
+.wiki-card, .youtube-card, .reddit-card {
+    bottom: 0px;
+    height: 70px;
+    background: #eee;
+}
+
+.lower-card-expand {
     -webkit-transition:0.5s;
     transition:0.5s;
+    bottom: 430px;
+    height: 500px;
 }
-
 .lower-deck:hover > div {
-    position: relative;
-    max-height: inherit;
-    bottom: inherit;
-    z-index: 9999;
+    background-color: #eee;
+    opacity: 0.5;
 }
 
 .lower-deck > div:hover {
-    position: relative;
-    min-height: 500px;
-    bottom: 430px;
-    z-index: 9999;
+    background-color: #fff;
+    opacity: 1;
 }
 /* ===================================== */
 
@@ -163,6 +197,7 @@ img {
     border-radius: 0;
       /* box-shadow: 0px 0px 5px 0px #888888; */
     margin: 0 !important;
+    background: #fff;
 }
 
 
@@ -175,17 +210,18 @@ img {
     width: 100%;
     text-align: center;
     opacity: 0.8;
-    z-index: 9999;
-    min-height: 60px;
+    min-height: 70px;
+    z-index: 0;
 }
 .top-title {
-    padding: 0;
+    padding-top: 5px;
     line-height: 3.5;
 }
 
 .bottom-title {
-    padding: 1em;
+    padding-top: 18px;
 }
+
 
 .fa-reddit-alien {
     color: #fff;
@@ -249,18 +285,13 @@ tr:hover {
         display: none;
     }
     .upper-deck {
-        max-height: 100vh;
+        height: 100vh;
     }
     .form-inline {
         padding-bottom: 1em;
     }
-    .card {
-        min-height: 45vh;
-    }
-    .card-title {
-        z-index: 1;
-    }
     .upper-table {
         margin-bottom: 0;
     }
+    
 }

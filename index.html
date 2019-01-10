@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
 
   </head>
-  <body>
+  <body scroll="no" style="overflow: hidden">
         <nav style="background-color:#222831 !important" class="navbar navbar-expand-md navbar-light bg-white d-flex justify-content-between fixed-top shadow-sm">
 
                 <div class="navbar-brand btn" style="background-color: #222831; color:white"><span class="text-logo">paperboy</span> <div class="nav-logo d-none d-lg-block d-xl-block"></div></div> 
@@ -37,13 +37,14 @@
                     </form>
                 </div>
         </nav>
-    <div class="wrapper">
+    <div class="fade-container"></div>    
+    <div class="wrapper wrapper-fade">
         <div class="card-deck upper-deck">
                 <div class="card">
-                <h5 class="card-title top-title"><img class="nyt-icon" src="./assets/images/nytlogo.svg"></h5>
+                <div class="card-title top-title"><img class="nyt-icon" src="./assets/images/nytlogo.svg"></div>
                   <div class="card-body">
 
-                    <table class="table upper-table">
+                    <table class="table upper-table table-hover">
                             <tbody class="nyt-cards">
 
                             </tbody>
@@ -51,9 +52,9 @@
                   </div>
                 </div>
                 <div class="card">
-                        <h5 class="card-title top-title"><img class="fox-icon" src="./assets/images/foxnews.svg"></h5>
+                        <div class="card-title top-title"><img class="fox-icon" src="./assets/images/foxnews.svg"></div>
                   <div class="card-body">
-                        <table class="table upper-table">
+                        <table class="table upper-table table-hover">
                                 <tbody class="article-body fox_news_cards">
                                   <!-- <tr>
                                     <td><h6>Treating Neck And Back Injuries</h6>
@@ -106,10 +107,11 @@
         </div>
         <div class="card-deck lower-deck">
   <!-- =================================== -->
-  <div class="card">
-          <h5 class="card-title bottom-title"><i class="fab fa-reddit-alien fa-lg"></i></h5>
+  <div class="card reddit-card">
+          <div class="card-title reddit-title bottom-title"><i class="fab fa-reddit-alien fa-lg"></i></div>
+          <div class="minimize"><i class="fas fa-plus minimize-icon reddit-minimize-icon"></i></div>
     <div class="card-body">
-          <table class="table">
+          <table class="table table-hover">
                   <tbody class="article-body reddit_cards">
                     <tr>
                       <td><h6>Treating Neck And Back Injuries</h6>
@@ -127,16 +129,18 @@
     </div>
   </div>
       <!-- ==================================== -->
-                <div class="card">
-                        <h5 class="card-title bottom-title"><i class="fab fa-youtube fa-lg"></i></h5>
+                <div class="card youtube-card">
+                        <div class="card-title youtube-title bottom-title"><i class="fab fa-youtube fa-lg"></i></div>
+                        <div class="minimize"><i class="fas fa-plus minimize-icon youtube-minimize-icon"></i></div>
                         <div class="card-body table youtube_cards">
                           
 
                           <!-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> -->
                         </div>
                 </div>
-                <div class="card">
-                        <h5 class="card-title wiki-title bottom-title"></h5>
+                <div class="card wiki-card">
+                        <div class="card-title wiki-title bottom-title overlay"></div>
+                        <div class="minimize"><i class="fas fa-plus minimize-icon wiki-minimize-icon"></i></div>
                     <div class="card-body wiki-section">
 
                         <!-- <p class="card-text" id="wikiInfo">Once a search term is entered, a general summary of searched item will appear.</p> -->
