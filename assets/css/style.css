@@ -39,23 +39,28 @@ a:hover {
     text-decoration: none;
 }
 #wikiInfo {
-    margin-top: 70px;
+    font-size: 1em;
 }
 
+.wiki-search-title {
+    margin-top: 71px;
+    border-top: 1px solid #dde2e6;
+    padding-top: 20px;
+}
+
+
+
 .wiki-day{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900 !important;
+    font-family: 'Roboto',sans-serif;
     font-size: 0.875em;
 }
 h6 {
     font-family: 'Roboto',sans-serif;
-    font-weight: 400 !important;
     font-size: 0.875em;
 }
 
 h4 {
     font-family: 'Roboto',sans-serif;
-    font-weight: 400 !important;
     font-size: 1.125em;
     margin-top: 30px;
 }

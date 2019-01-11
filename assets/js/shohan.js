@@ -48,14 +48,19 @@ wikiOnLoad()
         console.log("You searched for " + $("#search-query").val().trim())
         $(".wiki-title").html("<i class='fab fa-wikipedia-w'></i>")
         $.getJSON('https://en.wikipedia.org/api/rest_v1/page/summary/' + $("#search-query").val().trim(), function(data) {       // wikipedia api to get a summary based on button already created or new buttons added
-                 info = data.extract;
-                 console.log("info: " + info);
-                 var wikiInfo = $("<p>")
-                 wikiInfo.addClass("card-text")
-                 wikiInfo.attr("id", "wikiInfo")
-                 $(wikiInfo).html(info); //where the summary is shown on the page
-                 $(".wiki-section").empty();
-                 $(".wiki-section").append(wikiInfo)
+                info = data.extract;
+                console.log(data)
+                console.log("info: " + info);
+                var wikiTitle = $("<h4>")
+                var wikiInfo = $("<p>")
+                wikiTitle.addClass("wiki-search-title")
+                wikiInfo.addClass("card-text")
+                wikiInfo.attr("id", "wikiInfo")
+                $(wikiInfo).html(info); //where the summary is shown on the page
+                $(wikiTitle).html(data.displaytitle);
+                $(".wiki-section").empty();
+                $(".wiki-section").append(wikiInfo)
+                $(".wiki-section").prepend(wikiTitle)
 
         });
 
