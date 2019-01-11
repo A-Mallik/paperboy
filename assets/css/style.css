@@ -140,7 +140,8 @@ img {
     margin-left: 35px;
     margin-top: 30px;
     background-size: cover;
-    
+    background-position: center; 
+
 }
 
 .headline-text {
@@ -345,7 +346,13 @@ tr:hover {
     }
     .headline {
         font-size: 0.875em;
-        height: 50vh;
+        height: 200px;
+    }
+    .img-lg {
+        height: 200px; 
+    }
+    .card-body {
+        max-height: 50vh;
     }
     
 }
