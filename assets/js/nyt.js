@@ -20,6 +20,7 @@ function nytOnLoad() {
             catch(e) {
                 console.log("hahha no thumbnail")
                 var image = "assets/images/NYT_logo.jpg"
+                var imageLg = "assets/images/NYT_logo-lg.png"
             }
             if(i > 0) {
                 nytCard = $('<tr id=' + url + '><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src=' + image +' class="placeholder"></td></tr>');
