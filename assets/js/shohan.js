@@ -121,13 +121,13 @@ wikiOnLoad()
               for(var i =0; i < 25; i++){
                 var title=results.children[i].data.title;
                 var url=results.children[i].data.url;
-
                 var image=results.children[i].data.thumbnail;
+                var date= moment.unix(results.children[i].data.created_utc).fromNow()
                 if(image === "" || image === "self"){
                 image = "assets/images/reddit-logo.svg"
               }
 
-                var redditCard = $('<tr id=' + url + '><td><h6><a href="' + url + '"target="_blank">' + title + '</a></h6><p>' + " " + '</p></td><td class="d-flex justify-content-end"><img class="placeholder" src=' + image +' ></td></tr>');
+                var redditCard = $('<tr id=' + url + '><td><h6><a href="' + url + '"target="_blank">' + title + '</a></h6>' + '<span class="date-text">' + date + '</span><p>' + " " + '</p></td><td class="d-flex justify-content-end"><img class="placeholder" src=' + image +' ></td></tr>');
                 $('.reddit_cards').append(redditCard);
 
 

@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 
 function nytOnLoad() {
@@ -7,11 +9,12 @@ function nytOnLoad() {
         method: 'GET'
     }).then(function(response) {
                     console.log(response.results);
-
+                    console.log(moment([2007, 0, 29]).fromNow())
         for(let i = 0; i < 10; i++) {
             var title = response.results[i].title;
             var description = response.results[i].abstract;
             var url = response.results[i].url;
+            var date = moment(response.results[i].published_date).fromNow()
             var nytCard
             try {
                 var image = response.results[i].multimedia[0].url;
@@ -23,11 +26,11 @@ function nytOnLoad() {
                 var imageLg = "assets/images/NYT_logo-lg.png"
             }
             if(i > 0) {
-                nytCard = $('<tr id=' + url + '><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src=' + image +' class="placeholder"></td></tr>');
+                nytCard = $('<tr id=' + url + '><td><h6>' + title + '</h6><p>' + description + '<span class="date-text">&nbsp; &#8226; &nbsp;' + date + '</span></p></td><td class="d-flex justify-content-end"><img src=' + image +' class="placeholder"></td></tr>');
                 $('.nyt-cards').append(nytCard);
 
             } else {
-                nytCard = $('<div class="headline"><a href="' + url + '" target="_blank"><div id="nyt-headline" class="img-lg"></div><h4>' + title + '</h4></a><p class="headline-text">' + description + '</p></div>');
+                nytCard = $('<div class="headline"><a href="' + url + '" target="_blank"><div id="nyt-headline" class="img-lg"></div><h4>' + title + '</h4></a><p class="headline-text">' + description + '<span class="date-text">&nbsp; &#8226; &nbsp;' + date + '</span></p></div>');
                 $('.nyt-body').prepend(nytCard);
                 $('#nyt-headline').css("background-image", "url(" + imageLg + ")");  
             }
@@ -53,11 +56,13 @@ function nytSearchHTML(response) {
     $('.nyt-body').empty();
     $('.nyt-cards').empty();
     if(response.response.docs.length > 0) {
+        console.log(response)
         for(let i = 0; i < response.response.docs.length; i++) {
 
             var title = response.response.docs[i].headline.main;
             var description = response.response.docs[i].snippet;
             var url = response.response.docs[i].web_url;
+            var date = moment(response.response.docs[i].pub_date).fromNow()
             try {
                 var image = "https://static01.nyt.com/" + response.response.docs[i].multimedia[2].url;
             }
@@ -66,7 +71,7 @@ function nytSearchHTML(response) {
             }
 
 
-            var nytCard = $('<tr id=' + url + '><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src=' + image +' class="placeholder"></td></tr>');
+            var nytCard = $('<tr id=' + url + '><td><h6>' + title + '</h6><p>' + description + '<span class="date-text">&nbsp; &#8226; &nbsp;' + date + '</span></p></td><td class="d-flex justify-content-end"><img src=' + image +' class="placeholder"></td></tr>');
             $('.nyt-cards').append(nytCard);
         }
     } else {

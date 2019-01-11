@@ -137,7 +137,7 @@ img {
     width: 50%;
     height: 100%;
     float: right;
-    margin-left: 35px;
+    margin-left: 30px;
     margin-top: 30px;
     background-size: cover;
     background-position: center; 
@@ -155,6 +155,10 @@ img {
     height: 30vh
 }
 
+.date-text {
+    white-space: pre;
+    color: #999;
+}
 
 
 

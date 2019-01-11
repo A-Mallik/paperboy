@@ -1,6 +1,7 @@
 // Byron's JS
 // Test comment
 $(document).ready(function(){
+    
 
     //---------------------------------------FOX NEWS API:-----------------------------------//
     // console.log('byron.js online');
@@ -37,6 +38,7 @@ $(document).ready(function(){
                     var description = response.articles[i].description;
                     var url = response.articles[i].url;
                     var image = response.articles[i].urlToImage;
+                    var date = moment(response.articles[i].publishedAt).fromNow()
                 }
                 catch(e) {
                     var image = "assets/images/Fox_logo.jpg"
@@ -44,15 +46,15 @@ $(document).ready(function(){
                 //Add another if statement to get the first result
                 if(q.length === 93) {
                     if(i > 0) {
-                    foxNewsCard = $('<tr id="' + url + '"><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src="' + image +'" class="placeholder"></td></tr>');
+                    foxNewsCard = $('<tr id="' + url + '"><td><h6>' + title + '</h6><p>' + description + '<span class="date-text">&nbsp; &#8226; &nbsp;' + date + '</span></p></td><td class="d-flex justify-content-end"><img src="' + image +'" class="placeholder"></td></tr>');
                     $('.fox_news_cards').append(foxNewsCard);
                     } else {
-                    foxNewsBigCard = $('<div class="headline"><a href="' + url + '" target="_blank"><div id="fox-headline" class="img-lg"></div><h4>' + title + '</h4></a><p class="headline-text">' + description + '</p></div>');
+                    foxNewsBigCard = $('<div class="headline"><a href="' + url + '" target="_blank"><div id="fox-headline" class="img-lg"></div><h4>' + title + '</h4></a><p class="headline-text">' + description + '<span class="date-text">&nbsp; &#8226; &nbsp;' + date + '</p></div>');
                     $('.fox-body').prepend(foxNewsBigCard);
                     $('#fox-headline').css("background-image", "url(" + image + ")");  
                     }
                 } else{
-                    foxNewsCard = $('<tr id="' + url + '"><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src="' + image +'" class="placeholder"></td></tr>');
+                    foxNewsCard = $('<tr id="' + url + '"><td><h6>' + title + '</h6><p>' + description + '<span class="date-text">&nbsp; &#8226; &nbsp;' + date + '</span></p></td><td class="d-flex justify-content-end"><img src="' + image +'" class="placeholder"></td></tr>');
                     $('.fox_news_cards').append(foxNewsCard);
                 }
 
