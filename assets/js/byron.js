@@ -16,17 +16,22 @@ $(document).ready(function(){
             method: 'GET'
         }).then(function(response){
             // console.log(response);
-            foxNewsSearchHTML(response);
+            foxNewsSearchHTML(response,queryURL);
+            console.log("query length is " + queryURL.length)
         })
     }
 
-    function foxNewsSearchHTML(response) {
+    function foxNewsSearchHTML(response,q) {
+        if (q.length > 93) {
+            $('.fox-body').empty();
+        }
         $('.fox_news_cards').empty();
         if(response.totalResults > 0) {
             console.log(response)
             for(let i = 0; i < response.articles.length; i++) {
 
                 var foxNewsCard
+                var foxNewsBigCard
                 try {
                     var title = response.articles[i].title;
                     var description = response.articles[i].description;
@@ -36,14 +41,19 @@ $(document).ready(function(){
                 catch(e) {
                     var image = "assets/images/Fox_logo.jpg"
                 }
-                if(i > 0) {
+                //Add another if statement to get the first result
+                if(q.length === 93) {
+                    if(i > 0) {
                     foxNewsCard = $('<tr id="' + url + '"><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src="' + image +'" class="placeholder"></td></tr>');
                     $('.fox_news_cards').append(foxNewsCard);
-    
-                } else {
-                    foxNewsCard = $('<div class="headline"><a href="' + url + '" target="_blank"><div id="fox-headline" class="img-lg"></div><h4>' + title + '</h4></a><p class="headline-text">' + description + '</p></div>');
-                    $('.fox-body').prepend(foxNewsCard);
+                    } else {
+                    foxNewsBigCard = $('<div class="headline"><a href="' + url + '" target="_blank"><div id="fox-headline" class="img-lg"></div><h4>' + title + '</h4></a><p class="headline-text">' + description + '</p></div>');
+                    $('.fox-body').prepend(foxNewsBigCard);
                     $('#fox-headline').css("background-image", "url(" + image + ")");  
+                    }
+                } else{
+                    foxNewsCard = $('<tr id="' + url + '"><td><h6>' + title + '</h6><p>' + description + '</p></td><td class="d-flex justify-content-end"><img src="' + image +'" class="placeholder"></td></tr>');
+                    $('.fox_news_cards').append(foxNewsCard);
                 }
 
 
