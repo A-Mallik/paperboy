@@ -52,11 +52,11 @@ a:hover {
 
 .wiki-day{
     font-family: 'Roboto',sans-serif;
-    font-size: 0.875em;
+    font-size: 1em;
 }
 h6 {
     font-family: 'Roboto',sans-serif;
-    font-size: 0.875em;
+    font-size: 1em;
 }
 
 h4 {
@@ -75,7 +75,7 @@ table {
 
 
 p {
-    font-size: 0.875em;
+    font-size: 1em;
 }
 .nav-logo {
     height: 50px;
@@ -151,7 +151,7 @@ img {
 }
 
 .headline-text {
-    font-size: 0.875em !important;
+    font-size: 1em !important;
 }
 
 .headline {
@@ -355,7 +355,7 @@ tr:hover {
         font-size: 1em;
     }
     .headline {
-        font-size: 0.875em;
+        font-size: 1em;
         height: 200px;
     }
     .img-lg {
