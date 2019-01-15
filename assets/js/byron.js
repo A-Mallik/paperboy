@@ -72,7 +72,7 @@ $(document).ready(function(){
     function youtubeSearch(searchTerm) {
         $('.youtube_cards').empty();
         // console.log(searchTerm);
-        var youtubeSearchArray = ['fox news top news', 'nyt news', 'bbc top news', 'c span', 'abc top news'];
+        var youtubeSearchArray = ['fox news', 'nyt news', 'bbc news', 'c span', 'nbc news'];
 
         if(searchTerm.length < 1) {
             sort = true;
