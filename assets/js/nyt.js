@@ -3,7 +3,7 @@
 $(document).ready(function() {
 
 function nytOnLoad() {
-    var queryURL="https://api.nytimes.com/svc/topstories/v2/home.json?api-key=548cf1cc9a384242a531beac63abd9f4"
+    var queryURL="https://api.nytimes.com/svc/topstories/v2/home.json?api-key=phkPvKByBup8o1IXMhFUDbvRX7dNykSJ"
     $.ajax({
         url: queryURL,
         method: 'GET'
@@ -41,7 +41,7 @@ function nytOnLoad() {
 nytOnLoad();
 
 function nytSearch(searchTerm) {
-    queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=548cf1cc9a384242a531beac63abd9f4&sort=newest&q=" + searchTerm;
+    queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=phkPvKByBup8o1IXMhFUDbvRX7dNykSJ&sort=newest&q=" + searchTerm;
     $.ajax({
         url: queryURL,
         method: 'GET'
