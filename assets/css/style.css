@@ -1,8 +1,8 @@
 
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-}
+/* ::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+} */
 /* optional: show position indicator in red */
 /* ::-webkit-scrollbar-thumb {
     background: #FF0000;
@@ -94,6 +94,10 @@ p {
     color: #ccc;
 }
 
+.fa-plus {
+    display: none;
+}
+
 img {
     object-fit: cover;
 }
@@ -181,8 +185,8 @@ img {
 } */
 
 .upper-deck {
-    height: calc(100vh - 70px);
     padding-top: 50px;
+    height: calc(100vh - 70px);
 }
 /* ===================================== */
 .lower-deck {
@@ -237,6 +241,7 @@ img {
       /* box-shadow: 0px 0px 5px 0px #888888; */
     margin: 0 !important;
     background: #fff;
+    height: 100vh;
 }
 
 
@@ -296,7 +301,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8ffffff', e
     height: 20px;
 }
 .card-body {
-    overflow-y: scroll;
+    overflow-y: scroll !important;
     padding-top: 0 !important;
 }
 
