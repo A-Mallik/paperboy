@@ -48,8 +48,6 @@ a:hover {
     padding-top: 20px;
 }
 
-
-
 .wiki-day{
     font-family: 'Roboto',sans-serif;
     font-size: 1em;
@@ -196,7 +194,6 @@ img {
 
 .wiki-card, .youtube-card, .reddit-card {
     bottom: 0px;
-    height: 70px;
     background: #eee;
 }
 
@@ -303,6 +300,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8ffffff', e
 .card-body {
     overflow-y: scroll !important;
     padding-top: 0 !important;
+    padding-bottom: 150px;
 }
 
 .card-deck {
@@ -311,6 +309,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8ffffff', e
 
 .youtube_cards > :first-child {
     margin-top: 70px !important;
+}
+
+.youtube_cards, .wiki-section, .reddit-section {
+    padding-bottom: 350px !important;
 }
 
 
