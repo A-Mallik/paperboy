@@ -1,7 +1,7 @@
 # project1
 # Official Name: Paperboy
 # An alternative search engine for news - the goal was to capture results from both conservative and liberal sources with a touch of # modern sources such as YouTube and Reddit.
-<img src="https://github.com/A-Mallik/paperboy/blob/master/Paperboy.png?raw=true" width="300" height="162" alt="Paperboy">
+<img src="https://github.com/A-Mallik/paperboy/blob/master/Paperboy.png?raw=true" width="500" height="270" alt="Paperboy">
 
 Project 1
 Problem to solve: There’s too much clutter/overload when searching for information/news on Google and other search engines.
